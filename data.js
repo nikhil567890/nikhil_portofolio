@@ -8,7 +8,7 @@ export const RESUME_DATA = {
   profile: {
     name: "ATMAKURI NIKHIL",
     handle: "nikhil // digital_lab",
-    role: "Software Engineering Intern Candidate • CSE Data Science Student • Full-Stack Developer",
+    role: "CSE Data Science Student • Full-Stack Developer • AI & ML Enthusiast",
     status: "SYSTEM ACTIVE // READY FOR CHALLENGES",
     location: "Andhra Pradesh, India",
     email: "nikhilatmakuri275@gmail.com",
@@ -18,8 +18,8 @@ export const RESUME_DATA = {
     portfolioUrl: "https://nikhilatmakuriportofolio.vercel.app",
     resumeUrl: "./resume.pdf",
     mantra: "BUILDING. LEARNING. EXPLORING.",
-    bioShort: "Software Engineering intern candidate and B.Tech CSE (Data Science) student with 6-month Python Full Stack internship at Nlite Solutions Limited and real-world production builds.",
-    bioLong: "Software Engineering intern candidate and B.Tech Computer Science and Engineering (Data Science) student (expected 2028) with a 6-month Python Full Stack Developer internship at Nlite Solutions Limited and object-oriented programming experience in Java, C++, and Python. Designed, developed, and deployed full-stack applications using Django, React, Node.js, Spring Boot, and Firebase, including a client Android application used by around 100 users."
+    bioShort: "Computer Science (Data Science) undergraduate and Full-Stack Developer with hands-on experience building web & AI applications using Python, React, Node.js, Spring Boot, and Firebase.",
+    bioLong: "Computer Science (Data Science) undergraduate and Python Full Stack Developer with hands-on experience building full-stack web applications using Python, Django, React, Node.js, Spring Boot, and Firebase, and AI-powered platforms using Generative AI, Gemini AI, and machine learning. Built and deployed REST API-based applications for hackathon, client, and real-world use cases, with strong skills in databases (MySQL, SQL, Firestore), cloud deployment (AWS S3, Vercel), and problem solving."
   },
 
   languages: [
@@ -230,7 +230,7 @@ export const RESUME_DATA = {
     systemInfo: "NIKHIL_OS [Version 3.4.0-PROD] (x86_64-quantum)\nKernel: WebGL-Three.js Core 0.160.0 | Memory: 64MB VRAM\nType 'help' for available commands or click any quick command below.",
     commands: {
       help: "Available OS commands:\n  • whoami         - Display identity profile & links\n  • role           - Display engineering role & focus\n  • about          - Summary of background & expertise\n  • skills         - Enumerate technical skill matrix\n  • projects       - List verified software projects\n  • experience     - Display professional internships\n  • education      - Display academic credentials & CGPA\n  • certifications - List industry certifications\n  • achievements   - Highlight key awards & builds\n  • interests      - List 10 constellation focal areas\n  • contact        - Direct communication channels\n  • matrix         - Toggle visual matrix rain overlay\n  • sound          - Toggle synthesized audio engine\n  • reboot         - Replay OS ignition sequence\n  • shutdown       - Trigger digital core shutdown\n  • clear          - Clear terminal stdout buffer\n  • exit           - Close terminal HUD drawer",
-      whoami: "USER: ATMAKURI NIKHIL\nROLE: Software Engineering Intern Candidate • CSE Data Science Student • Full-Stack Developer\nSTATUS: Active & Available for Opportunities\nLOCATION: Andhra Pradesh, India\nGITHUB: https://github.com/nikhil567890\nLINKEDIN: https://linkedin.com/in/nikhil-atmakuri-849033339",
+      whoami: "USER: ATMAKURI NIKHIL\nROLE: CSE Data Science Student • Full-Stack Developer • AI & ML Enthusiast\nSTATUS: Active & Available for Opportunities\nLOCATION: Andhra Pradesh, India\nGITHUB: https://github.com/nikhil567890\nLINKEDIN: https://linkedin.com/in/nikhil-atmakuri-849033339",
       role: "PRIMARY FOCUS: Full-Stack Web (React, Node, Django), Python Engineering, Android Development & Applied AI Systems.",
       about: "ATMAKURI NIKHIL is a B.Tech CSE (Data Science) student at MVGR College of Engineering (CGPA 8.4). Holds a 6-month Python Full Stack Developer Internship certificate from Nlite Solutions Limited, with hands-on builds spanning Django, React, Spring Boot, Firebase, and a client Android application used by ~100 users.",
       skills: "TECHNICAL ARSENAL:\n  [Core Languages]      : Python, Java, C++, C\n  [Web Technologies]    : React, Vite, JavaScript, HTML, CSS\n  [Backend & Services]  : Django, Node.js, Express.js, Spring Boot\n  [Databases & Cloud]   : Firebase, Firestore, MySQL, SQL, AWS S3, Vercel\n  [AI & Data]           : Machine Learning, Generative AI, Gemini AI, Data Analysis\n  [Tools & Other]       : Git, GitHub, VS Code, Figma, PWA",
