@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  
+  <title>ATMAKURI NIKHIL // Digital Lab v3 — Cinematic WebGL Portfolio OS</title>
+  <meta name="description" content="Portfolio OS of Atmakuri Nikhil — Computer Science Student, Developer, and Builder. An immersive, unified WebGL experience featuring 3D procedural worlds, interactive skills galaxy, spatial timeline, and OS terminal.">
+  <meta name="author" content="Atmakuri Nikhil">
+  <meta name="keywords" content="Atmakuri Nikhil, Portfolio, WebGL, Three.js, Creative Technologist, Frontend Developer, React Native, Full Stack">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ATMAKURI NIKHIL // Digital Lab v3">
+  <meta property="og:description" content="A cinematic WebGL Portfolio OS featuring persistent 3D worlds, procedural GLSL core, and interactive terminal.">
+  <meta property="og:image" content="./favicon.svg">
+  <meta name="theme-color" content="#05060a">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">SKIP TO LAB CONTENT [ENTER]</a>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" role="progressbar" aria-label="Page scroll progress"></div>
+
+  <!-- Persistent 3D WebGL Canvas -->
+  <canvas id="webgl-canvas" aria-label="Interactive 3D WebGL Digital Universe"></canvas>
+  <div class="webgl-fallback-bg" aria-hidden="true"></div>
+
+  <!-- Atmospheric Overlays -->
+  <div class="film-grain-overlay" aria-hidden="true"></div>
+  <div class="vignette-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="cursor-badge" id="cursorBadge">EXPLORE</div>
+  </div>
+
+  <!-- OS Boot Sequence Overlay -->
+  <div class="boot-overlay" id="bootOverlay" role="dialog" aria-label="Operating System Boot Sequence">
+    <div class="boot-container">
+      <div class="boot-badge">BOOT_SEQUENCE // KERNEL v3.4.0</div>
+      <h1 class="boot-title">NIKHIL // DIGITAL LAB</h1>
+      <div class="boot-console" id="bootConsole">
+        <!-- Diagnostic steps typed dynamically -->
+      </div>
+      <div class="boot-progress-track">
+        <div class="boot-progress-fill" id="bootProgressFill"></div>
+      </div>
+      <button class="boot-action-btn" id="enterLabBtn">
+        INITIALIZE LAB OS ↗
+      </button>
+    </div>
+  </div>
+
+  <!-- Persistent Top HUD Navigation -->
+  <header class="hud-header" role="banner">
+    <div class="hud-left">
+      <a href="#hero" class="hud-logo" aria-label="Nikhil Digital Lab Home">
+        <span class="logo-mark">⚡</span> NIKHIL // LAB v3
+      </a>
+      <span class="telemetry-item" style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-cyan);">[ONLINE]</span>
+    </div>
+
+    <div class="hud-center">
+      <div class="hud-telemetry" aria-label="System Telemetry">
+        <div class="telemetry-item">PERF: <span id="telemetryFps">60 FPS</span></div>
+        <div class="telemetry-item">SECTOR: <span id="telemetrySector">IGNITION CORE</span></div>
+        <div class="telemetry-item">DEPTH: <span id="telemetryDepth">Z-0M</span></div>
+      </div>
+    </div>
+
+    <div class="hud-right">
+      <button class="hud-btn" id="audioToggleBtn" aria-label="Toggle synthesized audio">
+        <div class="audio-bars" aria-hidden="true">
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+        </div>
+        <span class="hud-btn-text">AUDIO: MUTED</span>
+      </button>
+
+      <button class="hud-btn" id="terminalTriggerBtn" aria-label="Open Interactive OS Terminal">
+        <span>&gt;_ TERMINAL</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- OS Chapter Sidebar Navigation -->
+  <nav class="chapter-nav" aria-label="Chapter Navigation">
+    <button class="chapter-dot-btn active" data-chapter="hero" aria-label="Jump to Ignition Core">
+      <span class="chapter-label">01. IGNITION CORE</span>
+      <span class="chapter-pip"></span>
+    </button>
+    <button class="chapter-dot-btn" data-chapter="about" aria-label="Jump to Skills Galaxy">
+      <span class="chapter-label">02. SKILLS GALAXY</span>
+      <span class="chapter-pip"></span>
+    </button>
+    <button class="chapter-dot-btn" data-chapter="projects" aria-label="Jump to Project Universe">
+      <span class="chapter-label">03. PROJECT UNIVERSE</span>
+      <span class="chapter-pip"></span>
+    </button>
+    <button class="chapter-dot-btn" data-chapter="timeline" aria-label="Jump to Spatial Timeline">
+      <span class="chapter-label">04. SPATIAL TIMELINE</span>
+      <span class="chapter-pip"></span>
+    </button>
+    <button class="chapter-dot-btn" data-chapter="interests" aria-label="Jump to Constellation">
+      <span class="chapter-label">05. CONSTELLATION</span>
+      <span class="chapter-pip"></span>
+    </button>
+    <button class="chapter-dot-btn" data-chapter="contact" aria-label="Jump to Contact Core">
+      <span class="chapter-label">06. CONTACT CORE</span>
+      <span class="chapter-pip"></span>
+    </button>
+  </nav>
+
+  <!-- Main Content Flow -->
+  <main id="main-content" class="content-wrapper">
+
+    <!-- 01. HERO — IGNITION SEQUENCE -->
+    <section id="hero" class="section">
+      <div class="hero-content interactive-panel">
+        <div class="micro-tag">OPERATING SYSTEM v3.4.0 // INITIALIZED</div>
+        <div class="hero-name-wrap">
+          <h1 class="hero-name" id="heroName">ATMAKURI NIKHIL</h1>
+        </div>
+        <div class="hero-role" id="heroRole">Computer Science Student • Developer • Builder</div>
+        
+        <div class="hero-cta-group">
+          <a href="#about" class="btn-primary" data-cursor-badge="EXPLORE">
+            <span>ENTER THE LAB</span> ▾
+          </a>
+          <button class="btn-secondary" id="heroTerminalBtn" onclick="document.getElementById('terminalTriggerBtn').click()" data-cursor-badge=">_ SHELL">
+            <span>LAUNCH TERMINAL</span> &gt;_
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <div class="scroll-indicator-line"></div>
+        <span>SCROLL TO DESCEND INTO THE DIGITAL LAB</span>
+      </div>
+    </section>
+
+    <!-- 02. ABOUT & SKILLS GALAXY -->
+    <section id="about" class="section">
+      <div class="grid-2col">
+        <div class="glass-panel interactive-panel">
+          <div class="micro-tag">SECTOR 02 // MEET THE BUILDER</div>
+          <h2 class="display-title">ARCHITECTING ROBUST SYSTEMS.</h2>
+          <p class="about-bio-text" id="aboutBio">
+            <!-- Long bio dynamically populated -->
+          </p>
+
+          <div class="micro-tag" style="margin-top: 1rem;">SPOKEN LANGUAGES</div>
+          <div class="languages-list" id="languagesList">
+            <!-- Languages populated -->
+          </div>
+
+          <div class="stats-matrix">
+            <div class="stat-box">
+              <div class="stat-value">6 MO</div>
+              <div class="stat-label">INDUSTRY INTERNSHIP</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value">100+</div>
+              <div class="stat-label">CLIENT APP USERS</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value">8.4</div>
+              <div class="stat-label">B.TECH CGPA (MVGR)</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value">5+</div>
+              <div class="stat-label">ENGINEERED BUILDS</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-inspector interactive-panel">
+          <div class="inspector-header">
+            <span>SCAN TECHNOLOGY // 12 ORBITING NODES</span>
+            <span>3D INTERACTIVE</span>
+          </div>
+
+          <div class="skill-pills-row" id="skillPillsRow">
+            <!-- Skill pills populated -->
+          </div>
+
+          <div class="inspector-details">
+            <div id="inspectorSkillTitle" style="color: var(--accent-cyan); font-weight: 700; margin-bottom: 6px;"></div>
+            <div id="inspectorSkillDesc"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. PROJECT UNIVERSE -->
+    <section id="projects" class="section">
+      <div class="projects-header interactive-panel">
+        <div class="micro-tag">SECTOR 03 // PROJECT UNIVERSE</div>
+        <h2 class="display-title">SPATIAL PROJECT CORRIDOR.</h2>
+        <p class="display-subtitle">
+          5 floating procedural worlds representing verified software engineering builds across AI crime investigation, fintech, mobile PWAs, community governance, and client Android applications.
+        </p>
+      </div>
+
+      <div class="projects-stack" id="projectsStack">
+        <!-- 5 Project Cards populated dynamically -->
+      </div>
+    </section>
+
+    <!-- 04. SPATIAL TIMELINE & MILESTONE -->
+    <section id="timeline" class="section">
+      <div class="interactive-panel" style="margin-bottom: 3.5rem;">
+        <div class="micro-tag">SECTOR 04 // SPATIAL DATA</div>
+        <h2 class="display-title">ACADEMIC & PROFESSIONAL PATH.</h2>
+      </div>
+
+      <div class="timeline-grid">
+        <!-- Education Bezier Timeline Column -->
+        <div class="glass-panel interactive-panel">
+          <div class="timeline-column-title">
+            <span>🎓</span> ACADEMIC TIMELINE
+          </div>
+          <div class="timeline-cards" id="educationTimelineCards">
+            <!-- 3 Education Nodes -->
+          </div>
+        </div>
+
+        <!-- Experience Radiant Beacon Column -->
+        <div class="glass-panel interactive-panel milestone-beacon-card" id="experienceBeaconCard">
+          <!-- Experience Milestone Beacon populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. INTERESTS CONSTELLATION -->
+    <section id="interests" class="section">
+      <div class="constellation-intro interactive-panel">
+        <div class="micro-tag">SECTOR 05 // CONSTELLATION MAPPING</div>
+        <h2 class="display-title">10-STAR FOCUS MATRIX.</h2>
+        <p class="display-subtitle" id="constellationActiveTitle">
+          An interactive celestial cluster of core engineering passions and domain explorations.
+        </p>
+      </div>
+
+      <div class="stars-cloud-grid" id="interestsCloudGrid">
+        <!-- 10 Stars populated dynamically -->
+      </div>
+    </section>
+
+    <!-- 06. CONTACT CORE & SHUTDOWN -->
+    <section id="contact" class="section">
+      <div class="contact-box interactive-panel">
+        <div class="micro-tag">SECTOR 06 // REACH THE CORE</div>
+        <h2 class="display-title">INITIALIZE TRANSMISSION.</h2>
+        <p class="display-subtitle" style="margin: 0 auto;">
+          Ready to collaborate on high-impact software, scalable web systems, and innovative engineering challenges.
+        </p>
+
+        <div class="contact-links-grid">
+          <a href="mailto:nikhilatmakuri275@gmail.com" class="contact-card-link" data-cursor-badge="MAIL ↗">
+            <span class="contact-card-title">DIRECT EMAIL</span>
+            <span class="contact-card-value" id="contactEmailVal">nikhilatmakuri275@gmail.com</span>
+          </a>
+
+          <a href="tel:+919182769155" class="contact-card-link" data-cursor-badge="CALL ↗">
+            <span class="contact-card-title">PHONE / WHATSAPP</span>
+            <span class="contact-card-value" id="contactPhoneVal">+91 91827 69155</span>
+          </a>
+
+          <a href="https://linkedin.com/in/nikhil-atmakuri-849033339" target="_blank" rel="noopener noreferrer" class="contact-card-link" data-cursor-badge="LINKEDIN ↗">
+            <span class="contact-card-title">PROFESSIONAL NETWORK</span>
+            <span class="contact-card-value">nikhil-atmakuri ↗</span>
+          </a>
+
+          <a href="https://github.com/nikhil567890" target="_blank" rel="noopener noreferrer" class="contact-card-link" data-cursor-badge="GITHUB ↗">
+            <span class="contact-card-title">OPEN SOURCE CODE</span>
+            <span class="contact-card-value">nikhil567890 ↗</span>
+          </a>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap;">
+          <a href="./resume.pdf" class="btn-primary" id="contactResumeVal" download data-cursor-badge="PDF ↗">
+            <span>DOWNLOAD RESUME (.PDF)</span> 📥
+          </a>
+        </div>
+
+        <div class="footer-mantra" id="footerMantra">
+          BUILDING. LEARNING. EXPLORING.
+        </div>
+
+        <button class="system-shutdown-btn" id="systemShutdownBtn">
+          [⏻] SHUTDOWN LAB OS SEQUENCE
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Project Detail Modal -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-label="Project Specifications">
+    <div class="terminal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-window">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      <div class="project-role-badge" id="modalProjRole"></div>
+      <h3 class="display-title" id="modalProjTitle" style="font-size: 2rem; margin-bottom: 0.3rem;"></h3>
+      <div class="project-tagline" id="modalProjTagline"></div>
+      <p class="project-desc" id="modalProjDesc" style="margin: 1rem 0;"></p>
+      
+      <div class="micro-tag" style="margin-top: 1rem;">KEY ARCHITECTURAL HIGHLIGHTS</div>
+      <ul class="modal-highlights" id="modalProjHighlights"></ul>
+
+      <div class="micro-tag">TECHNOLOGY ARSENAL</div>
+      <div class="project-tags" id="modalProjTech"></div>
+    </div>
+  </div>
+
+  <!-- Interactive Terminal OS Drawer -->
+  <div class="terminal-container" id="terminalDrawer"></div>
+
+  <!-- Application Entrypoint -->
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
