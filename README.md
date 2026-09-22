@@ -13,7 +13,7 @@
   <h3>✨ An interactive 3D WebGL cybernetic operating system showcasing full-stack engineering, AI/ML platforms, and creative web technology.</h3>
 
   <p align="center">
-    <a href="https://nikhilatmakuriportofolio.vercel.app" target="_blank"><strong>🌐 Explore Live Portfolio »</strong></a>
+    <a href="https://nikhil-atmakuri-portofolio.vercel.app" target="_blank"><strong>🌐 Explore Live Portfolio »</strong></a>
     &nbsp;•&nbsp;
     <a href="https://github.com/nikhil567890/nikhil_portofolio"><strong>📁 Repository »</strong></a>
     &nbsp;•&nbsp;
@@ -30,7 +30,7 @@
 - **Developer**: **Atmakuri Nikhil**
 - **Role**: CSE (Data Science) Undergraduate • Full-Stack Developer • AI & ML Enthusiast
 - **Education**: B.Tech CSE (Data Science) @ MVGR College of Engineering (CGPA: 8.4)
-- **Live Demo**: [nikhilatmakuriportofolio.vercel.app](https://nikhilatmakuriportofolio.vercel.app)
+- **Live Demo**: [nikhil-atmakuri-portofolio.vercel.app](https://nikhil-atmakuri-portofolio.vercel.app)
 
 ---
 
@@ -159,7 +159,7 @@ To run this portfolio locally on your machine:
 
 ## 📬 Connect With Me
 
-- **Portfolio**: [nikhilatmakuriportofolio.vercel.app](https://nikhilatmakuriportofolio.vercel.app)
+- **Portfolio**: [nikhil-atmakuri-portofolio.vercel.app](https://nikhil-atmakuri-portofolio.vercel.app)
 - **LinkedIn**: [linkedin.com/in/nikhil-atmakuri-849033339](https://linkedin.com/in/nikhil-atmakuri-849033339)
 - **GitHub**: [github.com/nikhil567890](https://github.com/nikhil567890)
 - **Email**: [nikhilatmakuri275@gmail.com](mailto:nikhilatmakuri275@gmail.com)

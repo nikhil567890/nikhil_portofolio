@@ -15,7 +15,7 @@ export const RESUME_DATA = {
     phone: "+91 91827 69155",
     linkedin: "https://linkedin.com/in/nikhil-atmakuri-849033339",
     github: "https://github.com/nikhil567890",
-    portfolioUrl: "https://nikhilatmakuriportofolio.vercel.app",
+    portfolioUrl: "https://nikhil-atmakuri-portofolio.vercel.app",
     resumeUrl: "./resume.pdf",
     mantra: "BUILDING. LEARNING. EXPLORING.",
     bioShort: "Computer Science (Data Science) undergraduate and Full-Stack Developer with hands-on experience building web & AI applications using Python, React, Node.js, Spring Boot, and Firebase.",
@@ -241,7 +241,7 @@ export const RESUME_DATA = {
       certifications: "CERTIFICATIONS:\n  • Cisco Python Course\n  • Cisco Computer Networks Course\n  • Cisco AI/ML Course\n  • Python Full Stack Developer Internship Certificate (Nlite Solutions Limited)",
       achievements: "ACHIEVEMENTS:\n  • Participated in national-level and college-level hackathons.\n  • Developed technology solutions for real-world problem statements across AI, education, community services, and software systems.\n  • Delivered client Android app used by around 100 active users.",
       interests: "CONSTELLATION FOCUS AREAS:\n  • AI/ML                 • Android Development\n  • Cloud Computing       • Software Engineering\n  • Hackathons            • UI/UX Design\n  • Problem Solving       • Emerging Tech\n  • Real-World Solutions  • Continuous Learning",
-      contact: "COMMUNICATION CHANNELS:\n  • Email    : nikhilatmakuri275@gmail.com\n  • Phone    : +91 91827 69155\n  • LinkedIn : https://linkedin.com/in/nikhil-atmakuri-849033339\n  • GitHub   : https://github.com/nikhil567890\n  • Portfolio: https://nikhilatmakuriportofolio.vercel.app\n  • Resume   : /resume.pdf"
+      contact: "COMMUNICATION CHANNELS:\n  • Email    : nikhilatmakuri275@gmail.com\n  • Phone    : +91 91827 69155\n  • LinkedIn : https://linkedin.com/in/nikhil-atmakuri-849033339\n  • GitHub   : https://github.com/nikhil567890\n  • Portfolio: https://nikhil-atmakuri-portofolio.vercel.app\n  • Resume   : /resume.pdf"
     }
   }
 };
